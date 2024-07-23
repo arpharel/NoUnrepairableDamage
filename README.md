@@ -5,7 +5,6 @@ Mod Version 1.0.4
 Developed by: Arpharel  
 Host/Client Requirements: All  
 Source: https://github.com/arpharel/NoUnrepairableDamage  
-Requires VoidManager 1.1.6
 
 
 ---------------------

@@ -1,10 +1,14 @@
 # No Unrepairable Damage
 
-For Game Version 0.26.3
-Mod Version 1.0.4
-Developed by: Arpharel
-Host/Client Requirements: All
-Source: https://github.com/arpharel/NoUnrepairableDamage
+For Game Version 0.26.3  
+Mod Version 1.0.4  
+Developed by: Arpharel  
+Host/Client Requirements: All  
+Source: https://github.com/arpharel/NoUnrepairableDamage  
+Requires VoidManager 1.1.6
+
+
+---------------------
 
 ## Overview
 This mod ensures that your ship can always be repaired to full health, eliminating the concept of unrepairable damage.

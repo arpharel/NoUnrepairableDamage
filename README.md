@@ -1,9 +1,9 @@
 # No Unrepairable Damage
 
 For Game Version 0.26.3  
-Mod Version 1.0.6  
+Mod Version 1.0.7  
 Developed by: Arpharel  
-Host/Client Requirements: All  
+Host/Client Requirements: Host  
 Source: https://github.com/arpharel/NoUnrepairableDamage  
 
 

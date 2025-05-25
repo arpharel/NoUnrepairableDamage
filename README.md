@@ -3,7 +3,7 @@
 For Game Version 0.26.3  
 Mod Version 1.0.9  
 Developed by: Arpharel  
-Contributors: Miranoff
+Contributors: Miranoff  
 Host/Client Requirements: Host  
 Source: https://github.com/arpharel/NoUnrepairableDamage  
 

@@ -17,5 +17,5 @@ This mod ensures that your ship can always be repaired to full health, eliminati
 - Requires BepInEx 5.* or higher.
 
 ## Usage
-~Once installed, the mod automatically converts any unrepairable damage your ship takes into repairable damage.~
+~Once installed, the mod automatically converts any unrepairable damage your ship takes into repairable damage.~  
 A hull breach is required in order for the hull to be repaired to full health. The last hull breach repaired will put the ship back to full health.

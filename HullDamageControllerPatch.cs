@@ -1,10 +1,12 @@
 ﻿using CG.Game;
 using CG.Ship.Repair;
+using CG.Space;
 using HarmonyLib;
 using System.Collections.Generic;
 using System.Reflection.Emit;
 using UnityEngine;
 using VoidManager.Utilities;
+using static TimeMachineBehaviour;
 
 namespace NoUnrepairableDamage
 {
@@ -34,10 +36,28 @@ namespace NoUnrepairableDamage
             return HarmonyHelpers.PatchBySequence(instructions, targetSequence, patchSequence, HarmonyHelpers.PatchMode.AFTER, HarmonyHelpers.CheckMode.NEVER);
         }
 
+        [HarmonyPostfix]
+        static void PostfixOnRepairedBreach(ref HullBreach breach, HullDamageController __instance, PlayerControlledShip ___playerShip)
+        {
+            List<HullBreach> list = new List<HullBreach>();
+            foreach (HullBreach hullBreach in __instance.Breaches)
+            {
+                if (hullBreach.State.condition == BreachCondition.Major || hullBreach.State.condition == BreachCondition.Minor)
+                {
+                    list.Add(hullBreach);
+                }
+            }
+
+            if (list.Count == 0)
+            {
+                ___playerShip.HitPoints = ___playerShip.MaxHitPointsValue;
+            }
+        }
+
         //Prevent ship hitpoints being higher than max hitpoints
         private static float ClampHitpoints(float hitpoints)
         {
-            return Mathf.Min(ClientGame.Current.PlayerShip.StartingHitPoints, hitpoints); //StartingHitPoints is marked obsolete, but MaxHitpoints is always 0
+            return Mathf.Min(ClientGame.Current.PlayerShip.MaxHitPointsValue, hitpoints); //Changed to use MaxHitPointsValue as that seems to be working now
         }
     }
 }

@@ -1,6 +1,6 @@
 # No Unrepairable Damage
 
-For Game Version 0.26.3  
+For Game Version 1.1.2  
 Mod Version 1.0.9  
 Developed by: Arpharel  
 Contributors: Miranoff  
